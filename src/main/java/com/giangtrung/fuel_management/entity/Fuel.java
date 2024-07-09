@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -17,7 +18,7 @@ public class Fuel {
     @Column(name = "quantity")
     private Integer quantity;
     @Column(name = "created_date")
-    private Date createdDate;
+    private LocalDate createdDate;
     @Column(name = "price")
     private Double Price;
     @ManyToOne
