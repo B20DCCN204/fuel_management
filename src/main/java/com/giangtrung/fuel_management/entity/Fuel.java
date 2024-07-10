@@ -3,8 +3,7 @@ package com.giangtrung.fuel_management.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "fuel")
@@ -17,9 +16,9 @@ public class Fuel {
     @Column(name = "quantity")
     private Integer quantity;
     @Column(name = "created_date")
-    private Date createdDate;
+    private LocalDate createdDate;
     @Column(name = "price")
-    private Double Price;
+    private Double price;
     @ManyToOne
     @JoinColumn(name = "type_id", nullable = false)
     private Type type;

@@ -11,12 +11,17 @@ spring:
     password: giang412345
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     show-sql: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
 
+logging:
+  level:
+    root: debug
+  file:
+    name: logs/app.log
 
 
 
