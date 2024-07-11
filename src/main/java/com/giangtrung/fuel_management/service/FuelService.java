@@ -10,6 +10,5 @@ import java.util.Map;
 public interface FuelService {
     FuelDto saveFuel(FuelDto fuelDto);
     Map<String, List<FuelDto>> getFuelsByDateRange(DateRangeRequest dateRangeRequest);
-
     Map<String, ConsumeResponse> getFuelsByConsume(Map<String, Integer> consume);
 }

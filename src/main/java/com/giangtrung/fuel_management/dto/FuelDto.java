@@ -16,12 +16,12 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class FuelDto {
     private Long id;
-    @NotNull(message = "Type is required")
+    @NotNull(message = "Type must be not null")
     private String typeFuel;
-    @NotNull(message = "Added date is required")
+    @NotNull(message = "Added date must be not null")
     private LocalDate createdDate;
-    @NotNull(message = "Quantity is required")
+    @NotNull(message = "Quantity must be not null")
     private Integer quantity;
-    @NotNull(message = "price is required")
+    @NotNull(message = "price must be not null")
     private Double price;
 }

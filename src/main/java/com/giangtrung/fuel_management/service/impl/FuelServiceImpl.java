@@ -90,10 +90,13 @@ public class FuelServiceImpl implements FuelService {
         log.info("Starting getFuelsByConsume with consume: {}", consume);
         Map<String, ConsumeResponse> result = new HashMap<>();
 
+        String typeId;
+        int requiredQuantity = 0;
+
         // Check consumes ("typeId" : requiredQuantity)
         for(Map.Entry<String, Integer> entry : consume.entrySet()){
-            String typeId = entry.getKey();
-            int requiredQuantity = entry.getValue();
+            typeId = entry.getKey();
+            requiredQuantity = entry.getValue();
             log.debug("Processing typeId: {} with requiredQuantity: {}", typeId, requiredQuantity);
 
             List<Fuel> fuels = fuelRepository.findByTypeIdOrderByCreatedDateDesc(typeId);
